@@ -1,0 +1,2 @@
+
+![Alt text](/path/to/imgs/map.png)
