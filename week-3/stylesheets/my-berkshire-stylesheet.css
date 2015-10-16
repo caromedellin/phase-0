@@ -1,0 +1,50 @@
+html {
+    background-color: #ffffff;
+}
+
+.column-2 {
+    -webkit-column-count: 2;
+    column-count: 2;
+    line-height: 2em;
+}
+
+.text-navy{
+    color: #000080;
+}
+
+a:link {
+    color: #800080;
+}
+
+a:visited {
+    color:#ff0000;
+}
+h1{
+  font-weight: bold;
+  font-size: 1.5em;
+  text-align: center;
+  line-height: 1em;
+}
+.text-large{
+  font-size: 2em;
+}
+h2{
+  font-weight: bold;
+  font-size: 1em;
+  text-align: center;
+  line-height: .5em;
+}
+
+p {
+  font-size: .8em;
+}
+
+.center-text {
+  text-align: center;
+  line-height: .5em;
+}
+
+.section {
+  border-bottom: 1px solid black;
+  padding: 1.5em;
+}
