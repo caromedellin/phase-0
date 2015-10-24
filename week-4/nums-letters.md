@@ -29,10 +29,13 @@ sec * min_in_hour * days_in_year * year
 #Release 5: Exercises
 
 ##Defining Variables
+
+https://github.com/caromedellin/phase-0/blob/master/week-4/defining-variables.rb
+
 ```ruby
-require 'redcarpet'
-markdown = Redcarpet.new("Hello World!")
-puts markdown.to_html
+first_name = "Carolina"
+last_name = "Medellin"
+age = 27
 ```
 
 ##Simple String Methods

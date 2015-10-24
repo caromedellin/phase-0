@@ -2,7 +2,7 @@
 #Solution Below
 first_name = "Carolina"
 last_name = "Medellin"
-age = 27∫
+age = 27
 
 
 
