@@ -36,7 +36,7 @@ https://github.com/caromedellin/phase-0/blob/master/week-4/defining-variables.rb
 first_name = "Carolina"
 last_name = "Medellin"
 age = 27
-```
+``
 
 ##Simple String Methods
 https://github.com/caromedellin/phase-0/blob/master/week-4/simple-string.rb
