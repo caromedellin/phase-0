@@ -20,6 +20,10 @@ def smallest_integer(list_of_nums)
       smallest = list_of_nums[i]
     end
     i +=1
+<<<<<<< HEAD
   end
+=======
+  end 
+>>>>>>> flow-control
   return smallest
 end
