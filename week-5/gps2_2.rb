@@ -24,46 +24,78 @@
 # Output: List in console or physical version of the list
 
 # Release 2
-
-list = Hash.new
-
-def return_list(list)
-   # All classes are capitalized by convention in Ruby.
-  return list
+def create_list
+  {}
 end
 
-def add_item(item, quantity)
-  list = {item.to_s => quantity} 
-  return list
+def add_item(list, food, quantity)  #OMG OMG OMG OMG!!!!!!!
+  list[food] = quantity
 end
 
-def remove_item(item)
-  list.delete(item) 
-  return list 
+# create_list[food] = quantity sets "quantity" as the value for the "food" key
+# list = create_list
+# add_item(list, "apple", 9)
+# add_item(list, "potato", 12)
+# p list
+
+def remove_item(list, food)
+  list.delete(food)
 end
 
-def update_quantity(item, quantity)
-  #if #item exists
-    list = {:item => quantity} 
-  return list
-  #else#give a warning
-    puts "you need to add the item first"
-  #end
+# list = create_list 
+# add_item(list, "apple", 9)
+# add_item(list, "potato", 12)
+# add_item(list, "banana", 45)
+# remove_item(list, "potato")
+# p list
+
+
+# list = create_list this makes it that list is never started over. It's importante that this is outside the method
+#  h.delete("a")  ---> deletes a particular key/value pair from a hash
+
+def change_quantity(list, food, quantity)
+  list[food] = quantity
 end
 
-def print_list(list) 
-  list.each{|item, quantity| puts "Buy #{quantity} #{item} " }
-end
+# h.each {|key, value| puts "#{key} is #{value}" }
 
-# Release 3
-p return_list #== {} # Try turning into tests if it is helpful. Else you can just p the value to see that it is what you intended it to be.
-p add_item("lemonade",2)
-#p add_item("tomatoe",3)
-# p add_item("lemonade",2)
-# p add_item("lemonade",2)
-# remove
+list = create_list 
+add_item(list, "apple", 9)
+add_item(list, "potato", 12)
+add_item(list, "banana", 45)
+remove_item(list, "potato")
+change_quantity(list, "banana", 22)
+
+#Methods apparently cannot be named "print" b/c it is a built-in method in ruby?!
+
+def print_list (list) 
+  puts " "
+  puts "On your list!"
+  list.each do | food, quantity|
+    puts "You need to buy #{quantity}: #{food}"
+    puts"-----------------------------"
+  end
+end
+print_list(list)
 
 # "Jane Doe" => 10, "Jim Doe" => 6
 
 
 # Release 4
+=begin
+• What did you learn about pseudocode from working on this challenge?
+  Pseudocoding helps you keep track of you short term goals with the code and helps acomplish small goals, if you write all your code at one without pseudocoding first it will be more frustrating
+• What are the tradeoffs of using Arrays and Hashes for this challenge?
+  Hashes have more compliated was to loop over, the .each method it's a bit too abstract, I'm still concerned with skipping elements
+• What does a method return?
+  Ruby method seam to return the last line they run, but don't take my word for it
+• What kind of things can you pass into methods as arguments?
+  You can pass on to them anything, as long as what you are trying to do to them is an action the argument accepts. But there are also, rquired arguments, optional arguments and default arguments
+• How can you pass information between methods?
+You can use global variables such as $ or you can set a variable outside the method to equal to the method so the results doesn't get reassigned every time. I have to say that using global variables would be hard to keep track of on the long run.
+• What concepts were solidified in this challenge, and what concepts are still confusing?
+Looping over hashes is still not automatic. The scope of functions is better, after banging my head against a wall for a whole day trying to figure out how to use fancy ruby methods… and hating on ruby docs. I finally realized that it was much more simple, I think I needed more hints on that because it wasn't such a complicated concept it was just not the first thing to pop out on the ruby methods… Onces I saw emmanuel set var = method once it all clicked. I still hate ruby docs, extremely dry and too much scrolling. It could be worse, it could be python dry
+
+
+
+=end
