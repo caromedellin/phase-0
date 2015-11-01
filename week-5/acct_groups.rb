@@ -1,7 +1,5 @@
 People = [" Caroline A. ", " Syema Ailia ", " Syema Ailia ", " Alan Alcesto ", " Daniel Andersen ", " James Artz ", " Darius Atmar ", " Brian Bensch ", " Nicola Beuscher ", " Kris Bies ", " Logan Bresnahan ", " William Brinkert ", " Laura C. ", " Scott Chou ", " Bernice Anne W Chua ", " Abraham Clark ", " Jon Clayton ", " Kevin Corso ", " Jacob Crofts ", " John D. ", " Katy D. ", " Emmanuel ", " Amaar Fazlani ", " Solomon Fernandez ", " Edward Gemson ", " Jamar Gibbs ", " Chris Gomes ", " Will Granger ", " Christopher M. Guard ", " Adell H. ", " James H. ", " Matt H. ", " Michael H. ", " Peter H. ", " Ryan Ho ", " Igor Kazimirov ", " Walter Kerr ", " Karla King ", " Becky Lehmann ", " Malia Lehrer ", " Carolina Medellin ", " Timothy Meixell ", " Lorena Mesa ", " Chris Miklius ", " Joshua Monzon ", " Shea Munion ", " Bryan Munroe ", " Trevor Newcomb ", " Aleksandra Nowak ", " Morgan O ", " Fatma Oca ", " Van Pha ", " Luis Fernando Plaz ", " Natalie Polen ", " Alicia Quezada ", " Celeen R. ", " Jessie Richardson ", " Gary S. ", " Iulia S. ", " Nimi Samocha ", " Zach Schatz ", " Tal Schwartz ", " Pratik Shah ", " Josh Shin ", " Shawn Spears ", " Sasha Tailor ", " Nil Thacker ", " Natasha Thapliyal ", " Sabrina Unrein ", " Brian Wagner ", " Clinton Weber ", " Gregory Wehmeier ", " Michael Whelpley ", " Alexander Williams  ", " Peter N Wood ", " Caitlyn Y. ", " Ryan Zell "]
 people= People.shuffle
-array=["one","two","three","four","five","1","2","3",4]
-array= array.shuffle
 def groups(array)
   if (array.length%5) > 3
     i = 6
@@ -20,7 +18,7 @@ def groups(array)
   end
   for i in 0...array.length
     puts "group #{i+1} => #{array[i]}"
-    end
+  end
 end
 groups(people)
 
@@ -125,5 +123,14 @@ END
 
 5.MAKE THOSE GROUPS SEPARATE COLLECTIONS
 
+REFLECTION
+If you run this program three times in a row, will the program give you three different outputs?
+Yes it gives different results everytime
+Should the program store past outputs?
+YOU COULD you'd only need to assign first_group = groups (people)
+If one person were to leave the cohort, how would the accountability groups change?
+It would change the nuber of groups
+How do you decide when you're done? You'll need to decide. This is much more challenging than you probably think, especially since there are no pre-written tests.
+When all the test pass and you refactor all you could while keeping readability
 =end
 
