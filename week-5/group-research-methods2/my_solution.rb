@@ -17,22 +17,6 @@ def my_array_finding_method(source, thing_to_find)
   new_array
 end
 
-# Person 2(Carolina Medellin)
-def my_array_modification_method!(array,num)
-  array.each_index{|idx| 
-    if array[idx].is_a?(Integer)
-      array[idx] += num
-    end
-    }
-end
-my_array_modification_method!(i_want_pets,2)
-
-def my_hash_finding_method(source, newage)
-  source.each do |name,age|
-    source[name] = (age += newage)
-  end
-  return source
-end
 
 
 # Identify and describe the Ruby method(s) you implemented
@@ -48,6 +32,39 @@ end
 # Checking Ruby Docs for methods on the array page and the hash page showed me what methods can be applied. I basically went through each of the examples on those pages that made the most sense to me.
 #
 #
+# Person 2(Carolina Medellin)
+def my_array_modification_method!(array,num)
+  array.each_index{|idx| 
+    if array[idx].is_a?(Integer)
+      array[idx] += num
+    end
+    }
+end
+
+def my_hash_finding_method(source, newage)
+  source.each do |name,age|
+    source[name] = (age += newage)
+  end
+  return source
+end
+=begin 
+Identify and describe the Ruby method you implemented
+  .each => to iterate over every element of the object
+
+  .is_a? => Boolean to use a action only when boolean is true
+
+  .map => Chose not to use it because it creates a new
+    array and I wanted the methods to be destructive
+
+Teach your accountability group how to use the methods
+  The each from what I understand .each deploys other methos
+  like collect/concat/include?/is_a?/find etc!
+Share any tricks you used to find and decipher the Ruby Docs
+  The only tricks for me this week was to think of a problem before I start trying to code
+  I try to write it and draw it, if you can draw it you can code it
+
+=end
+
 
 # Person 3 (James Artz)
 def my_array_sorting_method(array)
