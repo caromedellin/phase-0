@@ -12,26 +12,24 @@
 
 
 # 1. Initial Solution
-diediedie = nil
 class Die
   def initialize(sides)
-    # code goes here
-   for sides in 0..sides
-      diediedie << i
-   end
-   puts sides
+    if sides < 1
+     raise ArgumentError.new("input a positive number")
+    else
+    @sides = sides
+    end
   end
 
   def sides
-    # code goes here
-    diediedie=
+    p @sides
   end
 
   def roll
-    # code goes here
+    return rand(1..@sides)  
   end
 end
-6.Die 
+ 
 
 
 # 3. Refactored Solution
