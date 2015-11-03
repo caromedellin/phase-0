@@ -51,6 +51,8 @@ mode(strings)
 # 3. Refactored Solution
 
 #Still working on it
+#I did ended up using map to pass the tests, makes it a lot more simple to return an array
+#I was doing select and that only returns the first value
 
 
 # 4. Reflection

@@ -26,7 +26,7 @@ class Die
   end
 
   def roll
-    return rand(1..@sides)  
+    return Random.new.rand(1..@sides)  
   end
 end
  
