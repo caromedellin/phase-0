@@ -39,10 +39,13 @@ def mode(array)
   max = tempHash.max_by{|k,v| v}
   #array.map { |key, _| key }
   maximun = max[1]
-  newHash = tempHash.select { |key, val| val >= maximun }
-  newHash.each{|k, v| print k}
+  newHash = tempHash.find_all { |key, val| val >= maximun }
+  new = newHash.map {|k,v| k}
+  return new
   end 
 mode(strings)
+
+
 
 
 # 3. Refactored Solution
