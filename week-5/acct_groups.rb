@@ -1,6 +1,6 @@
 People = [" Caroline A. ", " Syema Ailia ", " Syema Ailia ", " Alan Alcesto ", " Daniel Andersen ", " James Artz ", " Darius Atmar ", " Brian Bensch ", " Nicola Beuscher ", " Kris Bies ", " Logan Bresnahan ", " William Brinkert ", " Laura C. ", " Scott Chou ", " Bernice Anne W Chua ", " Abraham Clark ", " Jon Clayton ", " Kevin Corso ", " Jacob Crofts ", " John D. ", " Katy D. ", " Emmanuel ", " Amaar Fazlani ", " Solomon Fernandez ", " Edward Gemson ", " Jamar Gibbs ", " Chris Gomes ", " Will Granger ", " Christopher M. Guard ", " Adell H. ", " James H. ", " Matt H. ", " Michael H. ", " Peter H. ", " Ryan Ho ", " Igor Kazimirov ", " Walter Kerr ", " Karla King ", " Becky Lehmann ", " Malia Lehrer ", " Carolina Medellin ", " Timothy Meixell ", " Lorena Mesa ", " Chris Miklius ", " Joshua Monzon ", " Shea Munion ", " Bryan Munroe ", " Trevor Newcomb ", " Aleksandra Nowak ", " Morgan O ", " Fatma Oca ", " Van Pha ", " Luis Fernando Plaz ", " Natalie Polen ", " Alicia Quezada ", " Celeen R. ", " Jessie Richardson ", " Gary S. ", " Iulia S. ", " Nimi Samocha ", " Zach Schatz ", " Tal Schwartz ", " Pratik Shah ", " Josh Shin ", " Shawn Spears ", " Sasha Tailor ", " Nil Thacker ", " Natasha Thapliyal ", " Sabrina Unrein ", " Brian Wagner ", " Clinton Weber ", " Gregory Wehmeier ", " Michael Whelpley ", " Alexander Williams  ", " Peter N Wood ", " Caitlyn Y. ", " Ryan Zell "]
 people= People.shuffle
-def groups(array)
+def groups_long(array)
   if (array.length%5) > 3
     i = 6
     while i < array.length
@@ -20,8 +20,16 @@ def groups(array)
     puts "group #{i+1} => #{array[i]}"
   end
 end
-groups(people)
-
+#///////////// OK RUBY IS MAGICAL ////////////
+#Refactored
+def groups(array)
+  if (array.length%5) > 3
+    array.each_slice(5) {|slice| p "Groups #{slice}"}
+  else
+    i = 5
+    array.each_slice(4) {|slice| p slice}
+  end
+end
 
 #pomodoro time 30 min but I spent all day yesterday thinking about this random method
 #I'm still trying to see how it works

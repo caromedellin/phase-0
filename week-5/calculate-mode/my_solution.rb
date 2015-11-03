@@ -57,6 +57,16 @@ mode(strings)
 
 # 4. Reflection
 =begin
+
+=begin
+  My reflecting led me to the random method
+  The random method was important to me because as I was doing my research I stumbled upon some info stating that some build in methods, like the Random from Javascript were not so great for generating random numbers, basically because they seam to overtime create distinct patterns, that is when you analyze the frequency of the results they are not all the same as you would expect for a totally random outcome, some results are more likely than other.
+Now that would be a serious problem because a random method is probably the core base to creating a lot of programs, like the lottery I would suppose, maybe some speculating programs for finance I would suppose if they are creating different scenarios… So in Java Script there is function to do this that is supposed to be the correct and only way to shuffle an array and it's modeled to be similar to the  the Knuth or Fisher-Yates shuffle.
+I obsessed over this for at least 3 days, picturing that maybe I could trick some poker online system and become rich right before they figured out my technique and send me to Mexico… Long story short I read that ruby actually used the Knuth or fisher yates shuffle in their method rand. I felt like I lost 3 days of my life day dreaming.
+
+Ok methods are way faster to find answers
+
+When you want to manipulate them much as you would do for a normal method, if you want a variable to be kind of global but only in your class, let's say you want to keep track of how many UX personas you have created you'd have to use @@ and not only @, and as best practice you'd put it before you start all your methods. Set it with a +1 every time you create a persona with your class and it will keep track of th
 Which data structure did you and your pair decide to implement and why?
 Arrays and Hashes
 Were you more successful breaking this problem down into implementable pseudocode than the last with a pair? 
