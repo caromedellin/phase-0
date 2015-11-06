@@ -69,6 +69,43 @@ class GuessingGame
 
 end
 
+#Alternative with a track
+
+class GuessingGame
+  @@track = []
+  def initialize(correct_answer)
+    @correct_answer = correct_answer
+    @solved = false
+  end
+
+  def guess(guess)
+    @@track << guess
+    @solved = false
+    if guess > @correct_answer
+      return :high
+    elsif guess < @correct_answer
+      return :low
+    else
+      @solved = true
+      return :correct
+    end
+    
+  end
+
+  def solved?
+    @solved
+  end
+  def track
+    p @@track
+  end
+  
+  def track=(new)
+    @@track = new
+  end
+
+
+end
+
 
 
 
