@@ -22,9 +22,9 @@
   #fill in the outline here
 
 # Initial Solution
-
 class BingoBoard
   attr_reader :game, :letter, :number
+  attr_accessor :bingo_board
   def initialize(board)
     @bingo_board = board
     #p "Welcome to Play BINGO"
@@ -61,27 +61,90 @@ class BingoBoard
         x[row] = "X"
       end}
   end
+  def did_i_win_vertical?
+    board = @bingo_board.flatten
+  i=0
+  for i in (0..4) do
+    win = 0
+  
+  (i..board.length - 1).step(5).each do |index|
+    if board[index] == "X"
+      win += 0
+    else
+      win += 1
+    end
+  end
+  if win ==0
+    p "YOU WIN!!!"
+  end
+    def did_i_win_horizontal?
+      board = @bingo_board
+  board.each {
+    |item|
+    win = 0
+    item.each{|inner| 
+      unless inner == "X"
+        win +=1
+      end
+      }
+    if win == 0
+      p "YOU WIN!!!"
+    end
+    }
+end
+    
+    
+    
+  end
+end
+  
 
 end
 
 # Refactored Solution
-=begin
-=end
+
 
 
 #DRIVER CODE (I.E. METHOD CALLS) GO BELOW THIS LINE
-board = [[47, 44, 71, 8, 88],
-        [22, 69, 75, 65, 73],
-        [83, 85, 97, 89, 57],
-        [25, 31, 96, 68, 51],
-        [75, 70, 54, 80, 83]]
+board = [["X", "X", "X", "X", "X"],
+        ["X", 69, 75, 65, 73],
+        ["X", 85, 97, 89, 57],
+        ["X", 31, 96, 68, 51],
+        ["X", 70, 54, 80, 83]]
+
+
 
 
 new_game = BingoBoard.new(board)
 new_game.call
-new_game.cross_number
-new_game.call
-new_game.cross_number
 new_game.print_board
-#Reflection
+new_game.did_i_win_vertical?
+new_game.did_i_win_horizontal?
+p "-----------------"
 
+(0..board.length - 1).step(2).each do |index|
+  p board[index]
+end
+
+num = (1..100).to_a
+new = []
+5.times do 
+  new << (num.shuffle.sample(5))
+end
+p new
+
+def did_i_win_horizontal?(board)
+  board.each {
+    |item|
+    win = 0
+    item.each{|inner| 
+      unless inner == "X"
+        win +=1
+      end
+      }
+    if win == 0
+      p "YOU WIN"
+    end
+    }
+end
+did_i_win_horizontal?(board)
