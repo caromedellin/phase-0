@@ -63,42 +63,35 @@ class BingoBoard
   end
   def did_i_win_vertical?
     board = @bingo_board.flatten
-  i=0
-  for i in (0..4) do
-    win = 0
-  
-  (i..board.length - 1).step(5).each do |index|
-    if board[index] == "X"
-      win += 0
-    else
-      win += 1
+    i=0
+    for i in (0..4) do
+      win = 0
+    (i..board.length - 1).step(5).each do |index|
+      if board[index] == "X"
+        win += 0
+      else
+        win += 1
+      end
+    end
+    if win ==0
+      p "YOU WIN (vertical)!!!"
     end
   end
-  if win ==0
-    p "YOU WIN!!!"
-  end
-    def did_i_win_horizontal?
-      board = @bingo_board
-  board.each {
-    |item|
-    win = 0
-    item.each{|inner| 
-      unless inner == "X"
+  def did_i_win_horizontal?
+    board = @bingo_board
+    board.each {|item|
+      win = 0
+      item.each{|inner| 
+        unless inner == "X"
         win +=1
-      end
+        end
       }
     if win == 0
-      p "YOU WIN!!!"
+      p "YOU WIN (horizontal)!!!"
     end
     }
-end
-    
-    
-    
+    end
   end
-end
-  
-
 end
 
 # Refactored Solution
