@@ -24,11 +24,34 @@
 # Initial Solution
 
 class BingoBoard
-
+  attr_reader :game, :letter, :number
   def initialize(board)
     @bingo_board = board
+    #p "Welcome to Play BINGO"
+    #sleep 0.8
+    #p "this is the only bingo room that it's not an actual room"
+    #sleep 0.5
+    #p"-----------------------"
+    #sleep 0.6
+    #p "THIS IS YOUR BOARD"
+    #sleep 1
+    #print_board
+  end
+  def print_board
+    p @bingo_board
   end
 
+  def call
+    @game = ("BINGO").split(//)
+    @letter = game.sample
+    @number = rand(1..100) 
+    p game
+    p "Annunciator calls on the mic:#{letter}#{number}!"
+  end
+  def cross_number
+    row = @game.index(letter)
+    p row
+  end
 
 end
 
@@ -44,6 +67,8 @@ board = [[47, 44, 71, 8, 88],
         [75, 70, 54, 80, 83]]
 
 new_game = BingoBoard.new(board)
-
+new_game.call
+new_game.cross_number
 
 #Reflection
+
