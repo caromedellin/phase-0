@@ -21,7 +21,7 @@
 # Display the board to the console (prettily)
   #fill in the outline here
 
-# Initial Solution
+# Initial Solutionclass BingoBoard
 class BingoBoard
   attr_reader :game, :letter, :number
   attr_accessor :bingo_board
@@ -44,6 +44,14 @@ class BingoBoard
     p @bingo_board[2]
     p @bingo_board[3]
     p @bingo_board[4]
+  end
+  
+  def new_board
+    new =[]
+    5.times do 
+    new << (((1..100).to_a).shuffle.sample(5))
+    end
+    @bingo_board = new
   end
 
   def call
@@ -92,6 +100,33 @@ class BingoBoard
     }
     end
   end
+
+
+  def diagonal_win
+    board = @bingo_board
+     win = 0
+    (0..board.length - 1).step(6).each do |index|
+      unless board[index] != "X"
+        win += 1
+      end
+     p win
+      if win ==0
+        p"#################"
+         p "YOU WIN (diagonal)!!!"
+      end
+    end
+    (4..board.length - 1).step(4).each do |index|
+      unless board[index] != "X"
+       win += 1
+       end
+      p win
+      if win ==0
+       p"#################"
+        p "YOU WIN (diagonal reverse)!!!"
+     end
+    end
+  end
+
 end
 
 # Refactored Solution
@@ -100,10 +135,10 @@ end
 
 #DRIVER CODE (I.E. METHOD CALLS) GO BELOW THIS LINE
 board = [["X", "X", "X", "X", "X"],
-        ["X", 69, 75, 65, 73],
-        ["X", 85, 97, 89, 57],
-        ["X", 31, 96, 68, 51],
-        ["X", 70, 54, 80, 83]]
+        ["X", "X", 75, "X", 73],
+        ["X", 85, "X", 89, 57],
+        ["X", "X", 96, "X", 51],
+        ["X", 70, 54, 80, "X"]]
 
 
 
@@ -113,6 +148,7 @@ new_game.call
 new_game.print_board
 new_game.did_i_win_vertical?
 new_game.did_i_win_horizontal?
+new_game.diagonal_win
 p "-----------------"
 
 (0..board.length - 1).step(2).each do |index|
@@ -141,3 +177,37 @@ def did_i_win_horizontal?(board)
     }
 end
 did_i_win_horizontal?(board)
+
+def diagonal(board)
+   win = 0
+  (0..board.length - 1).step(6).each do |index|
+    unless board[index] != "X"
+      win += 1
+    end
+  p win
+    if win ==0
+      p"#################"
+      p "YOU WIN (diagonal)!!!"
+    end
+  end
+  (4..board.length - 1).step(4).each do |index|
+    unless board[index] != "X"
+      win += 1
+    end
+  p win
+    if win ==0
+      p"#################"
+      p "YOU WIN (diagonal reverse)!!!"
+    end
+  end
+end
+diagonal(board)
+p board
+p" "
+p "lalalalalalalalalalalalalalala!!!!!"
+5.times do 
+  new||=[]<< (((1..100).to_a).shuffle.sample(5))
+end
+board = new
+p board
+new_game.new_board
