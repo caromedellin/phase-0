@@ -51,12 +51,17 @@ class BingoBoard
   def cross_number
     row = @game.index(letter)
     p row
+    @bingo_board.each { |x|
+      if x[row] == @number
+        x[row] = "X"
+      end}
   end
 
 end
 
 # Refactored Solution
-
+=begin
+=end
 
 
 #DRIVER CODE (I.E. METHOD CALLS) GO BELOW THIS LINE
@@ -66,9 +71,11 @@ board = [[47, 44, 71, 8, 88],
         [25, 31, 96, 68, 51],
         [75, 70, 54, 80, 83]]
 
+
 new_game = BingoBoard.new(board)
 new_game.call
 new_game.cross_number
+new_game.print_board
 
 #Reflection
 
