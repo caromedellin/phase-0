@@ -38,7 +38,12 @@ class BingoBoard
     #print_board
   end
   def print_board
-    p @bingo_board
+    p @game
+    p @bingo_board[0]
+    p @bingo_board[1]
+    p @bingo_board[2]
+    p @bingo_board[3]
+    p @bingo_board[4]
   end
 
   def call
@@ -75,7 +80,8 @@ board = [[47, 44, 71, 8, 88],
 new_game = BingoBoard.new(board)
 new_game.call
 new_game.cross_number
+new_game.call
+new_game.cross_number
 new_game.print_board
-
 #Reflection
 
