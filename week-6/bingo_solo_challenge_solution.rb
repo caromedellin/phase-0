@@ -1,3 +1,61 @@
+#THE ACTUAL CODE info about development at the end
+class BingoBoard
+  attr_reader :game, :letter, :number
+  attr_accessor :bingo_board
+  def initialize
+    new =[]
+    5.times { new << (((1..100).to_a).shuffle.sample(5))}
+    @bingo_board = new
+    @game = ("BINGO").split(//)
+    print_board
+  end
+  def print_board
+    p @game
+    p @bingo_board[0]
+    p @bingo_board[1]
+    p @bingo_board[2]
+    p @bingo_board[3]
+    p @bingo_board[4]
+  end
+  def call
+    @letter = @game.sample
+    @number = rand(1..100) 
+    p "Annunciator calls on the mic:#{letter}#{number}!"
+  end
+  def cross_number
+    row = @game.index(letter)
+    @bingo_board = @bingo_board.each { |x|
+      x[row] = "X" if x[row] == @number}
+    return @bingo_board
+  end
+  def did_i_win_vertical?
+    board = @bingo_board.flatten
+    i=0
+    for i in (0..4) do
+      win = 0
+    (i..board.length - 1).step(5).each { |index|
+      win += 1 unless board[index] == "X"}
+    p "YOU WIN (vertical)!!!" if win ==0
+  end
+  def did_i_win_horizontal?
+    board = @bingo_board
+    board.each {|item|
+      win = 0
+      item.each{|inner| win +=1 unless inner == "X" }
+      p "YOU WIN (horizontal)!!!" if win == 0}
+    end
+  end
+  def diagonal_win
+    board = @bingo_board
+     win = 0
+    (0..board.length - 1).step(6).each { |index|
+      win += 1 unless board[index] == "X"
+      p "YOU WIN (diagonal)!!!" if win ==0}
+    (4..board.length - 1).step(4).each { |index|
+       win += 1 unless board[index] == "X"
+      p "YOU WIN (diagonal reverse)!!!" if win ==0 }
+  end
+end
 # A Nested Array to Model a Bingo Board SOLO CHALLENGE
 
 # I spent [#] hours on this challenge.
