@@ -11,14 +11,11 @@ def serving_size_calc(item_to_make, order_quantity)
   error_counter = 3
 
   library.each do |food|
-    if library[food] != library[item_to_make]
-      p error_counter += -1
-    end
+      p error_counter += -1 if library[food] != library[item_to_make]
   end
 
-  if error_counter > 0
-    raise ArgumentError.new("#{item_to_make} is not a valid input")
-  end
+ 
+  raise ArgumentError.new("#{item_to_make} is not a valid input") if error_counter > 0
 
   serving_size = library.values_at(item_to_make)[0]
   serving_size_mod = order_quantity % serving_size
@@ -40,3 +37,9 @@ p serving_size_calc("cookie", 10)
 p serving_size_calc("THIS IS AN ERROR", 5)
 
 #  Reflection
+=begin
+  I refactored a bit, I missed my GSP but I like the refactoring now
+  I wan not completely enthusiastic about it next week because I did not want to use methods with out fully understanding them
+  So it helped me to keep them long but as the program grows it becomes easier to debug and build when everything has been refactored
+
+  =end
