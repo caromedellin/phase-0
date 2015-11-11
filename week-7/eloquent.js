@@ -11,7 +11,7 @@ var illustration = ["Thus", "for example", "for instance", "namely", "to illustr
 
 // Complete one of the exercises: Looping a Triangle, FizzBuzz, or Chess Board
 
-
+var me = {name:"Carolina", age: 27, favoriteFood: ["tacos", "dairy","fish"], quirk: "Talking too much and in a very exagerated way, for instance everything should be as awesome as unicorns with machine guns on magical substances" }
 
 // Functions
 //I realize JavaScript is not as automatic as ruby, I had become way to used to the refactored unless!
@@ -27,6 +27,7 @@ var minimum = function (x , y) {
 minimum(1,5);
 
 var FizzBuzz = function (numbers){
+  
 
 }
 
