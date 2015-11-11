@@ -26,8 +26,15 @@ delete terah.eyeColor;
 terah.children = {};
 adam.spouse = terah;
 var carson = new Object();
-terah.children.child = carson;
-
+terah.children = {carson};
+carson.name = "Carson";
+var carter = new Object;
+terah.children = {carson, carter};
+carter.name = "Carter";
+var colton = new Object;
+terah.children = {carson ,carter , colton};
+colton.name = "Colton";
+adam.children = terah.children;
 
 
 
