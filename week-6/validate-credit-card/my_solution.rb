@@ -19,7 +19,7 @@ cc_number = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,16]
 
 class CreditCard
   def initialize(cc_number)
-    @cc_number = cc_number
+    @cc_number = cc_number.to_s.split(//)
   end
   def check_card
     @cc_number.reverse!
@@ -45,15 +45,7 @@ class CreditCard
     end
     p c
 
-    return (c%10 == 0) ? true : false
-    
-    
-    
-    
-    
-    
-    
-    
+    return (c%10 == 0) ? true : false   
   end
 end
 newAccount = CreditCard.new(cc_number)
