@@ -25,12 +25,19 @@ var minimum = function (x , y) {
   }
 }
 minimum(1,5);
+numbers = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
 
-var FizzBuzz = function (numbers){
-  
-
-}
-
+  for (i=1ß; i <= 15; i++){
+    if(i % 3 === 0 &&  i % 5 === 0){
+       console.log("FizzBuzz");
+    } else if (i % 5 === 0){
+      console.log("Buzz");
+    } else if (i % 3 === 0){
+      console.log("Fizz");
+    } else{
+      console.log(i);
+    };
+  };
 
 // Data Structures: Objects and Arrays
 // Create an object called "me" that stores your name, age, 3 favorite foods, and a quirk below.
