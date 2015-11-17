@@ -1,5 +1,5 @@
 /*
-Step 2: Pseudocode for Group Project (written by James Artz)
+Step 2: Pseudo code for Group Project (written by James Artz)
 Overview: The group project is composed of 3 functions. The names of
 these functions are Sum, Mean, and Median.
 Function 1: Sum
@@ -70,7 +70,7 @@ Function 3, Median, should return EITHER the integer from the input
 array located at oddMedianIndex's position, OR the integer that is
 calculated and stored in the variable evenMedianOutput.
 A message from James to Syema and Carolina:
-Hey guys, sorry for the insanely long pseudocode! I hope it all makes
+Hey guys, sorry for the insanely long pseudo code! I hope it all makes
 sense! I talked to Emmanuel to get clarification on a question that I
 had regarding the rules for this group project: when Luis sent me the
 user stories, I wanted to get in touch with him to get some
@@ -80,7 +80,7 @@ to make sure you heard what you think you heard, you just pass on the
 message...
 So I wasn't allowed to send Luis a message and talk with him about
 what he sent me... which I would have liked to have done. Anyway, I
-hope my pseudocode is helpful to you guys, and if it's not, I think
+hope my pseudo code is helpful to you guys, and if it's not, I think
 the basic idea of what these functions are designed to do is
 encapsulated by their names - i.e., Sum, Mean, and Median. Hope this
 helps, or at least makes things clear enough to get the message through!
