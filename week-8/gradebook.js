@@ -15,19 +15,39 @@ var scores = [ [80, 70, 70, 100],
                [75, 70, 80, 75],
                [100, 90, 95, 85] ]
 
-var gradebook = {};
-gradebook = for each (student in students){
-  students
-};
-
-
 
 // __________________________________________
 // Write your code below.
+var gradebook = {
+  "Elizabeth": testScores = scores[3],
+  addScore: function(student, scores) {
+    this.name = student;
+    this.scores = scores;
+    console.log(this.name);
+  }
+}
+gradebook.addScore(students[0],scores[0]);
+console.log(gradebook.Elizabeth);
 
+// var students = ["Joseph", "Susan", "William", "Elizabeth"]
 
+// var scores = [ [80, 70, 70, 100],
+//                [85, 80, 90, 90],
+//                [75, 70, 80, 75],
+//                [100, 90, 95, 85] ]
 
-
+  
+// var gradebook = {};
+// for (var i= 0; i < students.length; i++){
+//  gradebook[students[i] ]  /*property name or key of choice*/
+//          = { testScores: scores[i], 
+//             addScore: function(){ scores[i].reduce((a, b) => a + b);},
+//             average: (scores[i].reduce((a, b) => a + b))/4
+            
+//             // (/4),
+//            }; 
+// };
+// console.log(gradebook);
 
 
 
@@ -36,14 +56,37 @@ gradebook = for each (student in students){
 // Refactored Solution
 
 
+var students = ["Joseph", "Susan", "William", "Elizabeth"]
 
+var scores = [ [80, 70, 70, 100],
+               [85, 80, 90, 90],
+               [75, 70, 80, 75],
+               [100, 90, 95, 85] ]
 
-
+  
+var gradebook = {};
+for (var i= 0; i < students.length; i++){
+ gradebook[students[i] ]  /*property name or key of choice*/
+         = { testScores: scores[i], 
+            addScore: function(){
+             var Array = this.testScores;
+              Array = (this.testScores.reduce((a, b) => a + b))/4
+             return Array;
+            },
+            average: (scores[i].reduce((a, b) => a + b))/4
+            
+            // (/4),
+           }; 
+};
+console.log(gradebook);
 
 
 
 // __________________________________________
 // Reflect
+/*
+I'm not sure why but I could not make my loop work with the for each element
+I believe it's because I was using an index.
 
 
 
@@ -51,8 +94,7 @@ gradebook = for each (student in students){
 
 
 
-
-
+*/ 
 // __________________________________________
 // Test Code:  Do not alter code below this line.
 
