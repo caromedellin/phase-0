@@ -48,7 +48,34 @@ console.log(gradebook.Elizabeth);
 //            }; 
 // };
 // console.log(gradebook);
+var average = function(integers){
+  integers = integers.reduce((a, b) => a + b)/(integers.length);
+  return integers;
+};
 
+var gradebook = {
+  Joseph: {
+    testScores: scores[0]
+  },
+  Susan: {
+    testScores: scores[1]
+  },
+  William: {
+    testScores: scores[2]
+  },
+  Elizabeth: {
+    testScores: scores[3]
+  }, 
+  addScore: function(name, score){
+    this.name = name
+    this.score = score
+    gradebook[name].testScores.push(score);
+  },
+  getAverage: function(name){
+    this.name = name
+    return average(gradebook[name].testScores);
+  }
+};
 
 
 
@@ -80,6 +107,23 @@ for (var i= 0; i < students.length; i++){
 };
 console.log(gradebook);
 
+/*
+for(var i =0; i < students.length; i++){
+  gradebook.students[i]={testScores: scores[i],
+                        addScore: function(name, score){
+                          this.name = name
+                          this.score = score
+                          gradebook[name].testScores.push(score);
+                        },
+                        getAverage: function(name){
+                          this.name = name
+                          return average(gradebook[name].testScores);
+                        }
+    
+}
+
+
+*/
 
 
 // __________________________________________
