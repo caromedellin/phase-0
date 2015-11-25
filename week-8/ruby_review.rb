@@ -3,18 +3,25 @@
 
 # Pseudocode
 
-
+# fibonacci formula 
+# num = (16/10)^num/√5
 
 # Initial Solution
 
 def is_fibonacci?(num)
-
+  x = 5 * num * num
+  if (Math.sqrt(x + 4)-Math.sqrt(x + 4).floor).zero? || (Math.sqrt(x - 4)-Math.sqrt(x - 4).floor).zero?
+    return true
+  else
+    return false
+  end
 end
 
 
 
 # Refactored Solution
-
+# I wanted to used the formula I still haven't fully solved it. I know you can create a series with inject and then check if the number is there.
+# I'm behind a bit this week! I'll come back to this.
 
 
 
