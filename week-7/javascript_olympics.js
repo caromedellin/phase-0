@@ -112,12 +112,12 @@ console.log(michaelPhelps.name + " " + michaelPhelps.sport + " " + michaelPhelps
 
 /*
 ABOUT OBJECTS
-This solidified my learing on how to construct objects.
+This solidified my learning on how to construct objects.
 In the reflection section of the manipulating_objects.js file, answer the following questions:
 Objects in JavaScript can be compared to objects in real life, they are standalone entities each one has their own properties and type. So you could compare them to real life things, such as a dog. Every dog has a color, a type a name that defines them. 
 You can access their properties with property name
 dog.hairColor
-Like all JavaScript variables, they are case snetitive. You can define a property by giving it a value, for instance:
+Like all JavaScript variables, they are case sensitive. You can define a property by giving it a value, for instance:
 Var myDog = new Object ( );
 myDog.name = “Dosha”;
 myDog.hairColor = “Black and White”;
