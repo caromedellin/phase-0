@@ -63,11 +63,49 @@ var officers = {
 }
 
 // Pseudocode
+// for(voter in votes)
+//   for (office in voter)
+//     if voter count has an object of everything that is nested under office
+//       (name under office) inside VoteCount +=1
+//     else
+//       name(under office) inside VoteCount =1
+// next error is to identify winner
+// since voteCount has new objects assigned I’ll iterate over them
+// for every office in voteCount
+// create a place holder with the maximum of votes (so there will be 4 max votes equal to 0)
+// for every candidate for each office
+//   if the value inside the candidate is greater than the place holder 
+//     place holder = value inside candidate
+//     office inside officer is reassigned to candidate every loop (only when condition is met)
 
 
 // __________________________________________
 // Initial Solution
 
+// for (var voter in votes){
+//   for(var office in votes[voter]){
+//     console.log(office)
+//     if(voteCount[office].hasOwnProperty(votes[voter][office])){
+//       voteCount[office][(votes[voter][office])] += 1;
+//     }
+//     else {
+//       voteCount[office][(votes[voter][office])] = 1;
+//     }
+//     console.log(votes[voter][office])
+//   }
+// }
+
+// console.log(voteCount.president);
+// for (var office in voteCount) {
+//   var winnerVote = 0;
+//   for (var candidate in voteCount[office]) {
+//      console.log(candidate)
+//      if(voteCount[office][candidate] >= winnerVote) {
+//       winnerVote = voteCount[office][candidate]; 
+//        officers[office] = candidate;
+//      }
+//    }
+//   };
 
 
 
@@ -76,6 +114,26 @@ var officers = {
 
 // __________________________________________
 // Refactored Solution
+for (var voter in votes){
+  for(var office in votes[voter]){
+    if(voteCount[office].hasOwnProperty(votes[voter][office])){
+      voteCount[office][(votes[voter][office])] += 1;
+    }
+    else {
+      voteCount[office][(votes[voter][office])] = 1;
+    }
+  }
+};
+
+for (var office in voteCount) {
+  var winnerVote = 0;
+  for (var candidate in voteCount[office]) {
+     if(voteCount[office][candidate] >= winnerVote) {
+      winnerVote = voteCount[office][candidate]; 
+       officers[office] = candidate;
+     }
+   }
+  };
 
 
 
@@ -84,8 +142,18 @@ var officers = {
 
 // __________________________________________
 // Reflection
+// What did you learn about iterating over nested objects in JavaScript?
+// I like loops in JS mainly because I read that even though they are not the most elegant they are the fastest
+// Or so I read, I guess in a function this small it doesn't particularly matter but if this were a national vote I'd go for a for loop
+// I learned that it's complicated to always grasp the proper object and for that reason I like to use the console.log and check first if I'm grabbing the proper object.
+// I find it ends up saving me time..
+// Were you able to find useful methods to help you with this?
+// Yes the hasOwnProperty was very useful, Every object descended from Object inherits the hasOwnProperty method.
+//  This method can be used to determine whether an object has the specified property as a direct property of that object; unlike the in operator,
+//  this method does not check down the object's prototype chain. 
 
-
+// What concepts were solidified in the process of working through this challenge?
+// It solidify the accessing of values for me and also the pushing objects and values in to an existing object.
 
 
 
