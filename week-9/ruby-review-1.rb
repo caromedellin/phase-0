@@ -211,3 +211,16 @@ horiz.winDiagonal
 #     winHorizontal(horizontal)
 
 
+# REFLECTION
+# What concepts did you review in this challenge?
+
+# CLASSES
+# I had totally forgoten everything about Ruby CLASSES
+# I'm happy we reviewed it like this because it was way faster
+# What is still confusing to you about Ruby?
+
+# The attributes in the classes I thought Ruby's encapsulation would make it necessary to have at least a reader attribute
+# but it was not necessary and since less is more with those accessors we didn't need to put any for this particular challenge
+
+# What are you going to study to get more prepared for Phase 1?
+# I'm going to check out this book ruby cookbook to see more examples of Ruby being implemented
